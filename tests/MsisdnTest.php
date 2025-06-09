@@ -21,7 +21,7 @@ class MsisdnTest extends PHPUnit_Framework_TestCase
     public function testValidNumbers()
     {
         foreach ($this->validMobileNumbers as $mobileNumber) {
-            $this->assertTrue(Coreproc\MsisdnPh\Msisdn::validate($mobileNumber),
+            $this->assertTrue(Alfan06\MsisdnPh\Msisdn::validate($mobileNumber),
                 'Mobile number "' . $mobileNumber . '" should be valid.');
         }
     }
@@ -29,18 +29,18 @@ class MsisdnTest extends PHPUnit_Framework_TestCase
     public function testInvalidNumbers()
     {
         foreach ($this->invalidMobileNumbers as $mobileNumber) {
-            $this->assertFalse(Coreproc\MsisdnPh\Msisdn::validate($mobileNumber),
+            $this->assertFalse(Alfan06\MsisdnPh\Msisdn::validate($mobileNumber),
                 'Mobile number "' . $mobileNumber . '" should be invalid.');
         }
     }
 
     /**
-     * @expectedException \Coreproc\MsisdnPh\Exceptions\InvalidMsisdnException
+     * @expectedException \Alfan06\MsisdnPh\Exceptions\InvalidMsisdnException
      */
     public function testExceptionInConstructor()
     {
         foreach ($this->invalidMobileNumbers as $mobileNumber) {
-            new \Coreproc\MsisdnPh\Msisdn($mobileNumber);
+            new \Alfan06\MsisdnPh\Msisdn($mobileNumber);
         }
     }
 
@@ -48,7 +48,7 @@ class MsisdnTest extends PHPUnit_Framework_TestCase
     {
         $mobileNumber = '+63917123-1234';
 
-        $msisdn = new \Coreproc\MsisdnPh\Msisdn($mobileNumber);
+        $msisdn = new \Alfan06\MsisdnPh\Msisdn($mobileNumber);
 
         $this->assertEquals('09171231234', $msisdn->get());
 
@@ -63,24 +63,24 @@ class MsisdnTest extends PHPUnit_Framework_TestCase
     {
         $mobileNumber = '09173231234';
 
-        $msisdn = new \Coreproc\MsisdnPh\Msisdn($mobileNumber);
+        $msisdn = new \Alfan06\MsisdnPh\Msisdn($mobileNumber);
 
         $this->assertEquals('917', $msisdn->getPrefix());
     }
 
     public function testOperator()
     {
-        $globeMsisdn = new \Coreproc\MsisdnPh\Msisdn('09255231234');
+        $globeMsisdn = new \Alfan06\MsisdnPh\Msisdn('09255231234');
 
-        $smartMsisdn = new \Coreproc\MsisdnPh\Msisdn('09191231234');
+        $smartMsisdn = new \Alfan06\MsisdnPh\Msisdn('09191231234');
 
-        $sunMsisdn = new \Coreproc\MsisdnPh\Msisdn('09251231234');
+        $sunMsisdn = new \Alfan06\MsisdnPh\Msisdn('09251231234');
 
-        $ditoMsisdn = new \Coreproc\MsisdnPh\Msisdn('09911231234');
+        $ditoMsisdn = new \Alfan06\MsisdnPh\Msisdn('09911231234');
 
-        $gomoMsisdn = new \Coreproc\MsisdnPh\Msisdn('09761231234');
+        $gomoMsisdn = new \Alfan06\MsisdnPh\Msisdn('09761231234');
 
-        $unknownMsisdn = new \Coreproc\MsisdnPh\Msisdn('08881231234');
+        $unknownMsisdn = new \Alfan06\MsisdnPh\Msisdn('08881231234');
 
         $this->assertEquals('GLOBE', $globeMsisdn->getOperator());
 
