@@ -148,7 +148,7 @@ Inside the `boot()` method, add the following line:
 
 ```php
 Validator::extend('msisdn', function ($attribute, $value, $parameters) {
-    return Coreproc\MsisdnPh\Msisdn::validate($value);
+    return Alfan06\MsisdnPh\Msisdn::validate($value);
 });
 ```
 
