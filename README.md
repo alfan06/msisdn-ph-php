@@ -148,7 +148,11 @@ Inside the `boot()` method, add the following line:
 
 ```php
 Validator::extend('msisdn', function ($attribute, $value, $parameters) {
+<<<<<<< HEAD
     return Alfan06\MsisdnPh\Msisdn::validate($value);
+=======
+    return Coreproc\MsisdnPh\Msisdn::validate($value);
+>>>>>>> 247ac04 (1.0)
 });
 ```
 
@@ -161,17 +165,26 @@ Validator::extend('msisdn', function ($attribute, $value, $parameters) {
 
 CoreProc is a software development company that provides software development services to startups, digital/ad agencies, and enterprises.
 
+<<<<<<< HEAD
 Learn more about us on our [website](https://alfan06.com).
+=======
+Learn more about us on our [website](https://coreproc.com).
+>>>>>>> 247ac04 (1.0)
 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
+<<<<<<< HEAD
 [ico-version]: https://img.shields.io/packagist/v/alfan06/msisdn-ph.svg?style=flat-square
+=======
+[ico-version]: https://img.shields.io/packagist/v/coreproc/msisdn-ph.svg?style=flat-square
+>>>>>>> 247ac04 (1.0)
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/CoreProc/msisdn-ph-php/master.svg?style=flat-square
 [ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/CoreProc/msisdn-ph-php.svg?style=flat-square
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/CoreProc/msisdn-ph-php.svg?style=flat-square
+<<<<<<< HEAD
 [ico-downloads]: https://img.shields.io/packagist/dt/alfan06/msisdn-ph.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/alfan06/msisdn-ph
@@ -179,5 +192,14 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [link-scrutinizer]: https://scrutinizer-ci.com/g/CoreProc/msisdn-ph-php/code-structure
 [link-code-quality]: https://scrutinizer-ci.com/g/CoreProc/msisdn-ph-php
 [link-downloads]: https://packagist.org/packages/alfan06/msisdn-ph
+=======
+[ico-downloads]: https://img.shields.io/packagist/dt/coreproc/msisdn-ph.svg?style=flat-square
+
+[link-packagist]: https://packagist.org/packages/coreproc/msisdn-ph
+[link-travis]: https://travis-ci.org/CoreProc/msisdn-ph-php
+[link-scrutinizer]: https://scrutinizer-ci.com/g/CoreProc/msisdn-ph-php/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/CoreProc/msisdn-ph-php
+[link-downloads]: https://packagist.org/packages/coreproc/msisdn-ph
+>>>>>>> 247ac04 (1.0)
 [link-author]: https://github.com/chrisbjr
 [link-contributors]: ../../contributors

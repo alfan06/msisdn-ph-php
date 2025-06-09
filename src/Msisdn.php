@@ -14,13 +14,10 @@ class Msisdn
 
     private $sunPrefixes = null;
 
-<<<<<<< HEAD
-=======
     private $ditoPrefixes = null;
 
     private $gomoPrefixes = null;
 
->>>>>>> 9c505f4 (v1.3.0)
     private $prefix = null;
 
     private $operator = null;
@@ -103,24 +100,6 @@ class Msisdn
             return $this->operator;
         }
 
-<<<<<<< HEAD
-        if (in_array($this->getPrefix(), $this->globePrefixes)) {
-            $this->operator = 'GLOBE';
-
-            return $this->operator;
-        }
-
-        if (in_array($this->getPrefix(), $this->smartPrefixes)) {
-            $this->operator = 'SMART';
-
-            return $this->operator;
-        }
-
-        if (in_array($this->getPrefix(), $this->sunPrefixes)) {
-            $this->operator = 'SUN';
-
-            return $this->operator;
-=======
         foreach ($this->globePrefixes as $globePrefix) {
             $prefix = substr($this->msisdn, 0, strlen($globePrefix));
 
@@ -169,7 +148,6 @@ class Msisdn
 
                 return $this->operator;
             }
->>>>>>> 9c505f4 (v1.3.0)
         }
 
         $this->operator = 'UNKNOWN';
@@ -190,8 +168,6 @@ class Msisdn
         if (empty($this->sunPrefixes)) {
             $this->sunPrefixes = json_decode(file_get_contents(__DIR__ . '/prefixes/sun.json'));
         }
-<<<<<<< HEAD
-=======
 
         if (empty($this->ditoPrefixes)) {
             $this->ditoPrefixes = json_decode(file_get_contents(__DIR__ . '/prefixes/dito.json'));
@@ -200,7 +176,6 @@ class Msisdn
         if (empty($this->gomoPrefixes)) {
             $this->gomoPrefixes = json_decode(file_get_contents(__DIR__ . '/prefixes/gomo.json'));
         }
->>>>>>> 9c505f4 (v1.3.0)
     }
 
     /**
