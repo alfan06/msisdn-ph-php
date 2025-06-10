@@ -1,0 +1,24 @@
+{
+    "name": "alfan06/msisdn-ph",
+    "type": "library",
+    "description": "An MSISDN identification and cleaner library for Philippine telco subscribers",
+    "keywords": ["msisdn", "msisdn philippines", "globe", "smart", "sun"],
+    "homepage": "http://github.com/alfan06/msisdn-ph-php",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Chris Bautista",
+            "email": "chrisbjr@gmail.com",
+            "homepage": "http://www.chrisbjr.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Alfan06\\MsisdnPh\\": "src"
+        }
+    }
+}
